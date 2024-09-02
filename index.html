@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Denúncias</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <link rel="shortcut icon" href="src/img/logo-header.svg">
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="src/img/GIF AMLMF.gif" alt="Logo da Empresa">
+    </header>
+
+    <div class="container">
+
+        <form target="" action="https://formsubmit.co/thuliocosta8@gmail.com" method="POST">
+
+            <div class="sobre">
+                <label for="Sobre">Sobre você:</label>
+                <label>Deseja se identificar?</label>
+                <input type="radio" name="identificacao" value="sim" required> Sim
+                <input type="radio" name="identificacao" value="nao" required> Não
+            </div>
+
+            <div id="identificado" style="display: none;">
+                <label for="nome">Qual seu nome?</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="email">Informe seu e-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="telefone">Melhor telefone para contato:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+
+            <div class="relacao">
+                <label for="relacao">Qual é a sua relação com a empresa?</label>
+                <select id="relacao" name="relacao" required>
+                    <option value="cliente">Cliente</option>
+                    <option value="fornecedor">Fornecedor</option>
+                    <option value="funcionario">Funcionário</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div id="empresa_trabalha" style="display: none;">
+                <label for="empresa">Qual empresa você trabalha?</label>
+                <input type="text" id="empresa" name="empresa">
+                <label for="cargo">Qual seu cargo?</label>
+                <input type="text" id="cargo" name="cargo">
+            </div>
+
+            <div class="ocorrido">
+                <label for="ocorrido">Sobre o ocorrido:</label>
+                <label for="ocorrido">Qual tipo de denúncia você deseja fazer?</label> <br>
+                <div class="checkbox">
+                    <ul>
+                        <li><input type="checkbox" name="assedio" id="assedio"><label for="assedio">Assédio Moral ou
+                                comportamento inadequado</label></li>
+                        <li><input type="checkbox" name="assedio2" id="assedio2"><label for="assedio2">Assédio
+                                Sexual</label>
+                        </li>
+                        <li><input type="checkbox" name="corrupcao" id="corrupcao"><label
+                                for="corrupcao">Corrupção</label>
+                        </li>
+                        <li><input type="checkbox" name="conflito" id="conflito"><label for="conflito">Conflito de
+                                interesses</label></li>
+                        <li><input type="checkbox" name="fraude" id="fraude"><label for="fraude">Fraude</label></li>
+                        <li><input type="checkbox" name="infracao" id="infracao"><label for="infracao">Infração aos
+                                direitos
+                                humanos</label></li>
+                        <li><input type="checkbox" name="roubos" id="roubos"><label for="roubos">Roubos, furtos e
+                                qualquer
+                                destruição de ativos</label></li>
+                        <li><input type="checkbox" name="uso" id="uso"><label for="uso">Uso indevido de informações
+                                privilegiadas ou confidenciais</label></li>
+                        <li><input type="checkbox" name="ourtros" id="ourtros"><label for="ourtros">Outros
+                                incidentes</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="local">
+                <label for="">Onde ocorreu o incidente?*</label>
+                <select id="local" name="local" required>
+                    <option value="skyville">SkyVille</option>
+                    <option value="nacoesville">NaçõesVille</option>
+                    <option value="primeville">PrimeVille</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="local_exato">
+                <label for="local_exato">Especifique onde ocorreu o incidente: *</label>
+                <textarea id="local_exato" name="local_exato" required></textarea>
+
+                <label for="quando">Quando esse fato ocorreu? *</label>
+                <textarea id="quando" name="quando" required></textarea>
+
+                <label for="quem">Quem cometeu o incidente? *</label>
+                <textarea id="quem" name="quem" required></textarea>
+
+                <label>Esse fato ainda acontece? *</label>
+                <textarea name="fato" id="fato"></textarea>
+
+                <label>Havia testemunhas? *</label>
+                <input type="radio" name="testemunhas" value="sim" required> Sim
+                <input type="radio" name="testemunhas" value="nao" required> Não
+            </div>
+
+            <div id="testemunhas" style="display: none;">
+                <label for="testemunhas">Cite o nome das testemunhas que estavam presentes. *</label>
+                <input type="text" id="testemunhas2" name="testemunhas2">
+            </div>
+
+            <div class="discricao">
+                <label for="denuncia">Por favor, descreva com o maior nível de detalhes possível o que aconteceu,
+                    indicando
+                    o(s) nome(s) da(s) pessoa(s) envolvida(s) entre outras informações que você julgar
+                    pertinentes:</label>
+                <textarea id="denuncia" name="denuncia" required></textarea>
+            </div>
+
+            <div class="grau">
+                <label>Qual o grau de certeza sobre o fato que você está denunciando? *</label>
+                <input type="radio" name="grau" value="ja_ouvi_dizer" required> Já ouvi dizer
+                <input type="radio" name="grau" value="tenho_certeza" required> Tenho a certeza
+                <input type="radio" name="grau" value="tenho_suspeitas" required> Tenho suspeitas
+            </div>
+
+            <div class="anexo">
+            <label for="anexo">Caso você tenha evidências sobre o fato (vídeo, foto, documento, etc), faça o upload do
+                arquivo aqui.</label>
+            </div>
+
+            <br>
+
+            <input type="file" id="anexo" name="anexo">
+
+            <button type="submit">Enviar Denúncia</button>
+
+        </form>
+    </div>
+
+    <script>
+        document.querySelectorAll('input[name="identificacao"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                const identificado = document.getElementById('identificado');
+                if (this.value === 'sim') {
+                    identificado.style.display = 'block';
+                } else {
+                    identificado.style.display = 'none';
+                }
+            });
+        });
+
+        document.querySelectorAll('input[name="testemunhas"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                const testemunhas = document.getElementById('testemunhas');
+                if (this.value === 'sim') {
+                    testemunhas.style.display = 'block';
+                } else {
+                    testemunhas.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('relacao').addEventListener('change', function () {
+            const empresaTrabalha = document.getElementById('empresa_trabalha');
+            if (this.value === 'funcionario') {
+                empresaTrabalha.style.display = 'block';
+            } else {
+                empresaTrabalha.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+<form action="http://seu-dominio-ou-ip:3000/processar-denuncia" method="post">
+    <!-- Campos do formulário -->
+    <button type="submit">Enviar Denúncia</button>
+</form>
+
+</html>
